@@ -38,7 +38,7 @@
                          <p><strong>Oferta termina en:</strong></p>
 
                          <!-- Contador en la sección de oferta -->
-                         <div id="section-countdown" class="countdown d-flex justify-content-center">
+                         <div id="section-countdown" class="countdown d-flex justify-content-center align-items-center">
                               <div class="digit">23</div><span class="separator">:</span>
                               <div class="digit">59</div><span class="separator">:</span>
                               <div class="digit">58</div>
@@ -265,36 +265,69 @@
      <!--slider -->
      <script>
           // Variables para el slider
-          const track = document.querySelector('.testimonial-slider-track');
-          const dots = document.querySelectorAll('.dot');
-          const cardWidth = document.querySelector('.testimonial-card').offsetWidth; // Ancho de una card
-          const gap = 16; // Espacio entre cards
-          let currentIndex = 0;
-          const totalSlides = dots.length;
+const track = document.querySelector('.testimonial-slider-track');
+const dots = document.querySelectorAll('.dot');
+const cardWidth = document.querySelector('.testimonial-card').offsetWidth; // Ancho de una card
+const gap = 16; // Espacio entre cards
+let currentIndex = 0;
+const totalSlides = dots.length;
 
-          // Función para cambiar de card
-          function goToCard(index) {
-               const offset = (cardWidth + gap) * index * -1; // Calcula el desplazamiento en píxeles
-               track.style.transform = `translateX(${offset}px)`;
+// Variables para el deslizamiento
+let startX = 0;
+let endX = 0;
 
-               // Actualizar dots
-               dots.forEach(dot => dot.classList.remove('active'));
-               dots[index].classList.add('active');
-          }
+// Función para cambiar de card
+function goToCard(index) {
+    const offset = (cardWidth + gap) * index * -1; // Calcula el desplazamiento en píxeles
+    track.style.transform = `translateX(${offset}px)`;
 
-          // Navegación por dots
-          dots.forEach((dot, index) => {
-               dot.addEventListener('click', () => {
-                    currentIndex = index;
-                    goToCard(currentIndex);
-               });
-          });
+    // Actualizar dots
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+}
 
-          // Desplazamiento automático (opcional)
-          setInterval(() => {
-               currentIndex = (currentIndex + 1) % totalSlides;
-               goToCard(currentIndex);
-          }, 5000); // Cambia de card cada 5 segundos
+// Navegación por dots
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        goToCard(currentIndex);
+    });
+});
+
+// Desplazamiento automático (opcional)
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    goToCard(currentIndex);
+}, 5000); // Cambia de card cada 5 segundos
+
+// Eventos para el deslizamiento (swipe)
+track.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX; // Guarda la posición inicial del dedo
+});
+
+track.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX; // Actualiza la posición mientras se desliza
+});
+
+track.addEventListener('touchend', () => {
+    const deltaX = endX - startX; // Calcula la distancia deslizada
+
+    // Si el deslizador se mueve hacia la izquierda (siguiente card)
+    if (deltaX < -50 && currentIndex < totalSlides - 1) {
+        currentIndex++;
+        goToCard(currentIndex);
+    }
+    // Si el deslizador se mueve hacia la derecha (card anterior)
+    else if (deltaX > 50 && currentIndex > 0) {
+        currentIndex--;
+        goToCard(currentIndex);
+    }
+
+    // Reinicia los valores de inicio y fin del deslizamiento
+    startX = 0;
+    endX = 0;
+});
+
 
      </script>
 

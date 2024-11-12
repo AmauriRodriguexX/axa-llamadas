@@ -317,6 +317,7 @@ p {
     width: 100%;
     gap: 16px; /* Añade espacio entre cada card sin modificar el ancho de cada card */
     padding-left: 16px; /* Opcional: espacio al inicio del slider */
+    margin-bottom: 24px;
 }
 
 
@@ -325,7 +326,7 @@ p {
      min-width: 100%; /* Cada card ocupa el 100% del contenedor visible */
      background-color: #ffffff;
      border-radius: 10px;
-     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.09);
      padding: 24px;
      text-align: left;
      display: flex;
@@ -376,7 +377,6 @@ p {
 .slider-dots {
     display: flex;
     justify-content: flex-start; /* Alinea los dots a la izquierda */
-    margin-top: 24px;
 }
 
 .dot {
