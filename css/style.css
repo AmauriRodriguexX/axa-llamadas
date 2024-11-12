@@ -1,0 +1,425 @@
+body {
+     background-color: #FFFFFF;
+     margin-top: 112px;
+ }
+
+@font-face {
+    font-family: 'Publico';
+    src: url('assets/fonts/Publico-Bold.woff2') format('woff2'),
+         url('assets/fonts/Publico-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('assets/fonts/SourceSansPro-Regular.woff2') format('woff2'),
+         url('assets/fonts/SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+h1 {
+    font-family: 'Publico', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Publico', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Source Sans ro', sans-serif;
+    font-size: 16px;
+    font-weight: normal; 
+}
+
+ 
+/* Estilo para el header */
+.header {
+     background-color: #ffffff;
+     height: 72px;
+     display: flex;
+     align-items: center;
+     padding-left: 14px;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+     position: fixed;
+     top: 0;
+     width: 100%;
+     z-index: 1000; /* Asegura que el header esté sobre otros elementos */
+ }
+ 
+.header .logo {
+     width: 40px;
+     height: 40px;
+ }
+ 
+.countdown {
+     gap: 8px;
+ }
+ 
+.digit {
+     background-color: #f1f1f1;
+     font-size: 1.5rem;
+     font-weight: bold;
+     padding: 8px 12px;
+     border-radius: 4px;
+     color: #333;
+     min-width: 40px;
+     text-align: center;
+ }
+ 
+.separator {
+     font-size: 1.5rem;
+     color: #333;
+     line-height: 1.5;
+ }
+ 
+.d-none {
+     display: none;
+ }
+ 
+.promo-section {
+     margin-top: 104px;
+ }
+ 
+
+.small-countdown {
+    display: flex;
+    align-items: center;
+    gap: 4px; 
+    margin-right: 12px;
+}
+
+.small-countdown .digit {
+    background-color: #f1f1f1;
+    font-size: 1rem; /* Tamaño de fuente reducido */
+    padding: 4px 6px; /* Espaciado reducido */
+    border-radius: 3px;
+    min-width: 30px; /* Tamaño más pequeño */
+    text-align: center;
+}
+
+.small-countdown .separator {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* sección promoción */
+.promo-section {
+    margin-top: 40px !important; 
+    margin-bottom: 40px !important; 
+}
+
+.promo-title {
+    color: #333;
+}
+
+.promo-text {
+    color: #333;
+}
+
+.promo-subtext {
+    color: #333;
+}
+
+/* Estilo para el contador */
+.countdown {
+    gap: 8px; /* Espacio entre los dígitos */
+}
+
+.digit {
+    background-color: #f1f1f1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #333;
+    min-width: 40px;
+    text-align: center;
+}
+
+.separator {
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.promo-button {
+    color: #000095;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    border: 1px solid #000095;
+    margin-top: 16px;
+    padding: 8px 28px;
+    height: 54px;
+    border-radius: 2px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+    outline: none;
+}
+
+/* Efecto hover */
+.promo-button:hover,
+.promo-button:focus {
+    background-color: #000095 !important;
+    color: #ffffff;
+}
+
+/* Efecto pressed o active */
+.promo-button:active {
+    background-color: #000095 !important; /* Mantiene el mismo color de fondo */
+    color: #ffffff; /* Asegura que el texto se mantenga en blanco */
+    transform: scale(0.98); /* Efecto de presionado */
+}
+
+/* Estilos para la navegación inferior */
+.bottom-navigation {
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     height: 100px; /* Altura del footer */
+     background-color: #ffffff;
+     box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1); /* Sombra en el borde superior */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1000; /* Asegura que esté sobre otros elementos */
+ }
+ 
+/* Estilos del botón dentro de la navegación inferior */
+.btn-bottom {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #000095;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    padding: 16px 4px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 100%; /* Asegura que ocupe el 100% del ancho del container */
+    max-width: 400px; /* Limita el ancho en pantallas grandes */
+    text-align: center;
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+    outline: none; /* Quita el borde por defecto del focus en algunos navegadores */
+}
+
+/* Efecto hover para el botón */
+.btn-bottom:hover {
+    background-color: #3333cc; /* Cambia el color de fondo en hover */
+}
+
+
+
+
+
+ /* Estilo para el título de la sección */
+.section-title {
+     font-family: 'Publico', sans-serif;
+     font-size: 1.5rem;
+     font-weight: bold;
+     color: #333;
+     margin-bottom: 24px;
+ }
+ 
+ /* Estilo para las cards */
+ .feature-card {
+     background-color: #ffffff;
+     border-radius: 8px;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+     text-align: center;
+ }
+ 
+ /* Icono en las cards */
+ .feature-icon {
+     width: 40px;
+     height: 40px;
+ }
+ 
+ /* Subtítulos en azul */
+ .feature-subtitle {
+     font-family: 'Source Sans Pro', sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     color: #000095; /* Color azul */
+     margin-bottom: 8px;
+ }
+ 
+ /* Texto en las cards */
+ .feature-text {
+     font-size: 14px;
+     font-weight: normal;
+     color: #333;
+ }
+
+/* Sección de testimonios */
+.testimonials-section {
+    background-color: #EEEEEE; 
+    padding: 3rem 1rem;
+}
+
+.section-title {
+    font-family: 'Publico', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.section-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 5px; 
+}
+
+.star-icon {
+    width: 33px;
+    height: 33px;
+    fill: #000095; 
+}
+
+
+/* slider */
+.testimonials-section {
+    background-color: #EEEEEE;
+    padding: 3rem 1rem;
+    overflow: hidden;
+}
+
+/* Contenedor del slider */
+.testimonial-slider {
+    margin-top: 32px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transform: translate(-10px, 0px) !important;
+}
+
+/* Track del slider */
+.testimonial-slider-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+    gap: 16px; /* Añade espacio entre cada card sin modificar el ancho de cada card */
+    padding-left: 16px; /* Opcional: espacio al inicio del slider */
+}
+
+
+/* Cada card individual */
+.testimonial-card {
+     min-width: 100%; /* Cada card ocupa el 100% del contenedor visible */
+     background-color: #ffffff;
+     border-radius: 10px;
+     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+     padding: 24px;
+     text-align: left;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: center;
+     box-sizing: border-box;
+ }
+
+
+/* Cabecera del testimonio: Avatar y Nombre */
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.5rem;
+}
+
+/* Avatar */
+.testimonial-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Nombre del cliente */
+.testimonial-name {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #000095;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Texto del testimonio */
+.testimonial-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-top: 0.5rem;
+}
+
+/* Dots de navegación alineados a la izquierda */
+.slider-dots {
+    display: flex;
+    justify-content: flex-start; /* Alinea los dots a la izquierda */
+    margin-top: 24px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 5px;
+    background-color: #8181CB;
+    border-radius: 50%;
+    display: inline-block;
+    transition: transform 0.6s ease-in-out;
+}
+
+.dot.active {
+    background-color: #000095;
+    width: 16px;
+    height: 8px;
+    border-radius: 40%;
+}
+
+
+/* Estilos para el footer */
+.footer {
+    background-color: #000095; /* Fondo azul oscuro */
+    padding: 2rem 1rem; /* Espaciado superior e inferior */
+    text-align: left;
+    color: #ffffff; /* Color de texto en blanco */
+    margin-bottom: 100px;
+}
+
+.footer-text {
+    font-size: 14px; /* Tamaño de fuente */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+    color: #ffffff;
+    margin: 0;
+}
+
+.footer-link {
+    color: #ffffff; /* Color del enlace en blanco */
+    text-decoration: underline; /* Subrayado para el enlace */
+    font-weight: bold; /* Negrita para resaltar el enlace */
+}
+
+.footer-link:hover {
+    color: #ccccff; /* Color de hover para el enlace */
+}
+

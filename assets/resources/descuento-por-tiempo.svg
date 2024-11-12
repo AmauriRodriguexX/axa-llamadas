@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clippath">
+      <rect width="40" height="40" fill="none"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clippath)">
+    <g id="Group_819-2" data-name="Group 819-2">
+      <path id="Path_1024" data-name="Path 1024" d="M21.21.5l2,.25c8.41,1.46,14.92,8.19,16.11,16.64.03.47.08.94.16,1.4-.03.81.05,1.64,0,2.44-1,17.07-22.4,24.65-33.97,11.85C-5.41,21,2.64,1.45,18.77.5h2.44ZM18.68,3.8C6.81,4.6-.05,18.02,5.99,28.27c4.57,7.73,14.54,10.29,22.27,5.72,1.88-1.11,3.52-2.59,4.82-4.35,8.27-11.28-.52-26.78-14.4-25.84" fill="#000095"/>
+      <path id="Path_1025" data-name="Path 1025" d="M21.59,8.65v6.4l1.91-2.51,2.65,1.94-7.76,10.33V8.65h3.2Z" fill="#000095"/>
+    </g>
+  </g>
+</svg>
