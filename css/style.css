@@ -5,16 +5,16 @@ body {
 
 @font-face {
     font-family: 'Publico';
-    src: url('assets/fonts/Publico-Bold.woff2') format('woff2'),
-         url('assets/fonts/Publico-Bold.woff') format('woff');
+    src: url('../assets/fonts/Publico-Bold.woff2') format('woff2'),
+         url('../assets/fonts/Publico-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Source Sans Pro';
-    src: url('assets/fonts/SourceSansPro-Regular.woff2') format('woff2'),
-         url('assets/fonts/SourceSansPro-Regular.woff') format('woff');
+    src: url('../assets/fonts/SourceSansPro-Regular.woff2') format('woff2'),
+         url('../assets/fonts/SourceSansPro-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
