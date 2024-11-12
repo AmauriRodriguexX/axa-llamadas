@@ -19,7 +19,14 @@ body {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../assets/fonts/SourceSansPro-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
 
+/* Estilos de texto */
 h1 {
     font-family: 'Publico', sans-serif;
     font-size: 22px;
@@ -34,9 +41,15 @@ h2, h3, h4, h5, h6 {
 }
 
 p {
-    font-family: 'Source Sans pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 16px;
     font-weight: normal; 
+}
+
+/* Párrafos en semi-bold */
+p.semi-bold {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600; 
 }
 
  
@@ -158,6 +171,7 @@ p {
     margin-top: 24px;
     padding: 8px 28px;
     height: 54px;
+    font-weight: 600;
     border-radius: 2px;
     background-color: transparent;
     cursor: pointer;
